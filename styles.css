@@ -40,3 +40,6 @@
 .modal-secondary{margin-top:9px;border:1px solid var(--line);background:transparent;color:var(--muted)}
 body.modal-open{overflow:hidden}
 @media(max-width:640px){.brand-image{width:96px;height:43px}.footer-main .brand-image{width:95px}.modal-game-logo{height:68px}}
+
+/* Blend the logo artwork into the dark art direction so its dark matte does not read as a box. */
+.game-logo,.brand-image,.modal-game-logo{mix-blend-mode:screen}
