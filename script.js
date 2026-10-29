@@ -98,25 +98,53 @@
         const pixels = image.data;
         const width = canvas.width;
         const height = canvas.height;
-        const alphaSample = [0, width - 1, (height - 1) * width, height * width - 1];
-        let transparentCorners = 0;
-        let cornerLuma = 0;
-        let cornerCount = 0;
-        const cornerColours = [];
-        alphaSample.forEach((pixel) => {
-          const p = pixel * 4;
-          if (pixels[p + 3] < 240) transparentCorners++;
-          cornerColours.push([pixels[p], pixels[p + 1], pixels[p + 2]]);
-          cornerLuma += 0.2126 * pixels[p] + 0.7152 * pixels[p + 1] + 0.0722 * pixels[p + 2];
-          cornerCount++;
+        const patch = 10;
+        const cornerStats = [];
+        let transparentSamples = 0;
+        let sampled = 0;
+        const corners = [
+          [0, 0],
+          [width - patch, 0],
+          [0, height - patch],
+          [width - patch, height - patch]
+        ];
+        corners.forEach(([left, top]) => {
+          let alphaSum = 0;
+          const colourSum = [0, 0, 0];
+          let opaqueCount = 0;
+          for (let y = top; y < top + patch; y++) {
+            for (let x = left; x < left + patch; x++) {
+              const p = (y * width + x) * 4;
+              sampled++;
+              alphaSum += pixels[p + 3];
+              if (pixels[p + 3] < 240) transparentSamples++;
+              if (pixels[p + 3] > 10) {
+                colourSum[0] += pixels[p];
+                colourSum[1] += pixels[p + 1];
+                colourSum[2] += pixels[p + 2];
+                opaqueCount++;
+              }
+            }
+          }
+          const denominator = Math.max(1, opaqueCount);
+          cornerStats.push({
+            alpha: alphaSum / (patch * patch),
+            rgb: colourSum.map((value) => value / denominator)
+          });
         });
-        if (transparentCorners > 0) {
+        // Leave native transparent logos untouched; only process uniformly dark matte corners.
+        if (transparentSamples / sampled > 0.08) {
           logo.dataset.cutoutDone = "true";
           return;
         }
-        const avgLuma = cornerLuma / cornerCount;
-        const spread = Math.max(...cornerColours.map((c) => Math.max(...c) - Math.min(...c)));
-        if (avgLuma > 42 || spread > 55) {
+        const cornerColours = cornerStats.map((corner) => corner.rgb);
+        const avgLuma = cornerColours.reduce((sum, c) => sum + 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2], 0) / cornerColours.length;
+        const colourSpread = Math.max(...[0, 1, 2].map((channel) => {
+          const values = cornerColours.map((c) => c[channel]);
+          return Math.max(...values) - Math.min(...values);
+        }));
+        const channelSpread = Math.max(...cornerColours.map((c) => Math.max(...c) - Math.min(...c)));
+        if (avgLuma > 42 || colourSpread > 35 || channelSpread > 55) {
           logo.dataset.cutoutDone = "true";
           return;
         }
