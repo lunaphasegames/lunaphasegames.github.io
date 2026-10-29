@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://lunaphasegames.github.io/">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles.css?v=landing-6">
+  <link rel="stylesheet" href="styles.css?v=landing-7">
   <script src="script.js?v=landing-5" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lunaphase Games">
@@ -67,10 +67,10 @@
         <p class="games-tagline">A little paint. A lot of suspicion.</p>
       </div>
       <div class="game-gallery">
-        <div class="gallery-image"><img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line artwork." loading="lazy"></div>
-        <div class="gallery-image"><img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line artwork." loading="lazy"></div>
-        <div class="gallery-image"><img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line artwork." loading="lazy"></div>
-        <div class="gallery-image"><img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line artwork." loading="lazy"></div>
+        <button class="gallery-image" type="button" aria-label="Enlarge Out of Line image" data-lightbox-src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg"><img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line artwork." loading="lazy"></button>
+        <button class="gallery-image" type="button" aria-label="Enlarge Out of Line image" data-lightbox-src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg"><img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line artwork." loading="lazy"></button>
+        <button class="gallery-image" type="button" aria-label="Enlarge Out of Line image" data-lightbox-src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg"><img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line artwork." loading="lazy"></button>
+        <button class="gallery-image" type="button" aria-label="Enlarge Out of Line image" data-lightbox-src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg"><img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line artwork." loading="lazy"></button>
       </div>
     </section>
 
@@ -111,5 +111,9 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="image-lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close enlarged image">&times;</button>
+    <img class="lightbox-image" src="" alt="Enlarged Out of Line artwork">
+  </div>
 </body>
 </html>

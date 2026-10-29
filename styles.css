@@ -161,3 +161,71 @@ button:focus-visible, a:focus-visible { outline: 2px solid #fff; outline-offset:
   font-weight: 600;
   line-height: 1.35;
 }
+
+
+/* Responsive gallery and in-page image enlargement */
+.gallery-image {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: zoom-in;
+  touch-action: manipulation;
+}
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .22s ease;
+}
+.gallery-image:hover img { transform: scale(1.025); }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 36px);
+  background: rgba(0, 8, 16, .94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, visibility .18s ease;
+}
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox-image {
+  display: block;
+  max-width: min(96vw, 1600px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 18px 70px rgba(0,0,0,.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(14px, env(safe-area-inset-right));
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  background: rgba(0,18,32,.75);
+  color: white;
+  font-size: 32px;
+  line-height: 1;
+}
+body.lightbox-open { overflow: hidden; }
+@media (max-width: 680px) {
+  .section-space { padding-left: 16px; padding-right: 16px; }
+  .games-section { padding-top: 44px; padding-bottom: 44px; }
+  .section-heading h2 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .games-tagline { font-size: clamp(1rem, 4.5vw, 1.25rem); margin: 10px 0 22px; }
+  .game-gallery { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 14px; }
+  .gallery-image { aspect-ratio: 16 / 9; height: auto; }
+  .gallery-image img { width: 100%; height: 100%; object-fit: contain; }
+  .lightbox-image { max-width: 100%; max-height: 82dvh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lightbox, .gallery-image img { transition: none; }
+}
