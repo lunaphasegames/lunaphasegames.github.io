@@ -819,3 +819,16 @@ body.lightbox-open { overflow: hidden; }
     margin-bottom: 20px;
   }
 }
+
+
+/* Slightly enlarge the About section emblem. */
+.about-top-icon {
+  width: 92px;
+  height: 92px;
+}
+@media (max-width: 680px) {
+  .about-top-icon {
+    width: 72px;
+    height: 72px;
+  }
+}
