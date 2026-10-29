@@ -483,3 +483,64 @@ body.lightbox-open { overflow: hidden; }
     text-align: center;
   }
 }
+
+
+/* Requested final refinements */
+.about-section {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 18px;
+  text-align: center;
+}
+.about-mark-wrap {
+  order: 0;
+  width: min(180px, 45vw);
+  margin: 0 auto;
+}
+.about-copy {
+  order: 1;
+  width: 100%;
+  max-width: 780px;
+  text-align: center;
+}
+.about-copy h2,
+.contact-heading h2 {
+  text-align: center;
+}
+.contact-heading { text-align: center; }
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-links a {
+  width: min(100%, 260px);
+  justify-content: center;
+  border-bottom: 0;
+}
+.footer-bottom {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.footer-bottom > span { text-align: center; }
+.footer-socials { justify-content: center; }
+@media (max-width: 680px) {
+  /* Keep the complete artwork visible in each square gallery tile. */
+  .game-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .gallery-image {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #061a29;
+  }
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
