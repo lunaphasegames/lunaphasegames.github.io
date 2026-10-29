@@ -803,3 +803,19 @@ body.lightbox-open { overflow: hidden; }
     font-size: 16px;
   }
 }
+
+
+/* Lunaphase emblem above the About heading. */
+.about-top-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 26px;
+  object-fit: contain;
+}
+@media (max-width: 680px) {
+  .about-top-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
