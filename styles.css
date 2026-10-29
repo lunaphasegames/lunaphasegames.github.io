@@ -706,3 +706,100 @@ body.lightbox-open { overflow: hidden; }
     line-height: 1.6;
   }
 }
+
+
+/* Final requested cleanup: socials-only footer and more prominent contact links. */
+.about-section {
+  grid-template-columns: minmax(0, 780px);
+  justify-content: center;
+  justify-items: center;
+}
+.about-mark-wrap { display: none; }
+
+.site-footer {
+  padding: 24px 6%;
+}
+.footer-bottom {
+  width: 100%;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  scroll-margin-top: 24px;
+}
+.footer-socials a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  opacity: .9;
+  transition: opacity .18s, transform .18s, background .18s;
+}
+.footer-socials a:hover {
+  background: rgba(225, 240, 248, .08);
+}
+.footer-socials img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.contact-description {
+  max-width: 640px;
+  margin: 20px auto 0;
+  color: #c6d6e1;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.65;
+  text-align: center;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.contact-links .contact-discord-link {
+  width: min(100%, 320px);
+  min-height: 76px;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border: 1px solid rgba(225, 240, 248, .2);
+  border-radius: 9px;
+  background: rgba(88, 101, 242, .15);
+  color: white;
+  font-size: 16px;
+  font-weight: 750;
+}
+.contact-links .contact-discord-link:hover {
+  border-color: rgba(145, 155, 255, .8);
+  background: rgba(88, 101, 242, .26);
+}
+.contact-links .contact-discord-link img {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+@media (max-width: 680px) {
+  .footer-socials { gap: 10px; }
+  .footer-socials a { width: 42px; height: 42px; }
+  .footer-socials img { width: 25px; height: 25px; }
+  .contact-description { font-size: 15px; }
+  .contact-links .contact-discord-link {
+    width: min(100%, 320px);
+    min-height: 72px;
+    font-size: 16px;
+  }
+}
