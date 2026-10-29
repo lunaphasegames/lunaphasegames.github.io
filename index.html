@@ -3,28 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#003153">
-  <meta name="description" content="Meet Out of Line, a multiplayer social deduction game from Lunaphase Games. Paint together, compare the canvas, and find the player with a different prompt.">
+  <meta name="theme-color" content="#001220">
+  <meta name="description" content="Out of Line is a multiplayer social deduction game from Lunaphase Games. A little paint. A lot of suspicion.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lunaphasegames.github.io/">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles.css?v=e70b954f">
-  <script src="script.js?v=e70b954f" defer></script>
+  <link rel="stylesheet" href="styles.css?v=landing-4">
+  <script src="script.js?v=landing-4" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lunaphase Games">
   <meta property="og:title" content="Lunaphase Games | Out of Line">
-  <meta property="og:description" content="Paint together. Compare the canvas. Find the fake.">
+  <meta property="og:description" content="A little paint. A lot of suspicion.">
   <meta property="og:url" content="https://lunaphasegames.github.io/">
   <meta property="og:image" content="https://lunaphasegames.github.io/images/favicon.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Lunaphase Games | Out of Line">
-  <meta name="twitter:description" content="Paint together. Compare the canvas. Find the fake.">
+  <meta name="twitter:description" content="A little paint. A lot of suspicion.">
   <meta name="twitter:image" content="https://lunaphasegames.github.io/images/favicon.png">
   <title>Lunaphase Games | Out of Line</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="filter-defs" aria-hidden="true" width="0" height="0" focusable="false">
+    <filter id="remove-white-background" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -0.8 -0.8 -0.8 2.4 0"/>
+    </filter>
+  </svg>
 
   <section class="hero" id="top" aria-labelledby="hero-title">
     <img class="hero-background" src="images/library_hero_3840x1240.png" alt="" fetchpriority="high">
@@ -37,191 +43,121 @@
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
         <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <a href="#game">The game</a>
-          <a href="#artwork">Art &amp; chaos</a>
-          <a href="#studio">Lunaphase</a>
+          <a href="#games">GAMES</a>
+          <a href="#about">ABOUT</a>
         </nav>
       </div>
     </header>
-
-    <div class="hero-inner">
-      <p class="hero-kicker">A multiplayer game by Lunaphase Games</p>
-      <img class="game-logo" src="images/library_logo_1280x720.png" alt="Out of Line" fetchpriority="high">
-      <h1 id="hero-title" class="visually-hidden">Out of Line</h1>
-      <p class="hero-copy">Paint together. Compare the canvas.<br>Figure out who's on a different page.</p>
+    <div class="hero-center">
+      <h1 id="hero-title">A little paint.<br><span>A lot of suspicion.</span></h1>
+    </div>
+    <div class="hero-bottom">
       <div class="hero-actions">
         <button class="platform-button platform-steam hero-button" type="button" data-modal-open="steam-modal">
-          <img src="images/brands/steam.svg" alt="" class="platform-logo">
-          <span>Wishlist on Steam</span>
+          <img src="images/brands/steam.svg" alt="" class="platform-logo"><span>Wishlist on Steam</span>
         </button>
         <button class="platform-button platform-discord hero-button" type="button" data-modal-open="discord-modal">
-          <img src="images/brands/discord.svg" alt="" class="platform-logo">
-          <span>Join the Discord</span>
+          <img src="images/brands/discord.svg" alt="" class="platform-logo"><span>Join the Discord</span>
         </button>
       </div>
-      <p class="hero-footnote">A little paint. A lot of suspicion.</p>
     </div>
-    <a class="scroll-cue" href="#game"><span>Scroll to meet the game</span><span class="scroll-line" aria-hidden="true"></span></a>
   </section>
 
   <main id="main">
-    <section class="game-section section-space" id="game">
-      <div class="section-topline">
-        <p class="eyebrow">SO, WHAT'S THE IDEA?</p>
-        <p class="side-note">A party game about being almost right.</p>
+    <section class="games-section section-space" id="games" aria-labelledby="games-title">
+      <div class="section-heading">
+        <p class="eyebrow">THE GAME</p>
+        <h2 id="games-title">OUT OF LINE</h2>
       </div>
-      <div class="game-intro-grid">
-        <h2>One wall.<br>Many bad ideas.<br><span>One very odd painter.</span></h2>
-        <div class="game-intro-copy">
-          <p><strong>Out of Line</strong> is a multiplayer social deduction game where everyone adds paint to one shared canvas. Most players get the same word. Someone may get a different one.</p>
-          <p>Look at the picture taking shape, swap theories, and work out who isn't quite painting the same idea. Artistic talent isn't the point. Explaining why you painted that giant purple blob? That's part of the fun.</p>
-          <button class="text-cta" type="button" data-modal-open="steam-modal">
-            <img src="images/brands/steam.svg" alt="" class="platform-logo">
-            <span>Check out Out of Line on Steam</span>
-          </button>
-        </div>
-      </div>
-      <figure class="featured-art">
-        <img src="images/page_background_1438x810.jpg" alt="Out of Line artwork: colourful graffiti lettering on a metallic room wall, with paint splashes and space-themed details." loading="lazy">
-        <figcaption><span>OUT OF LINE</span><span>FIND THE FAKE</span></figcaption>
-      </figure>
-    </section>
-
-    <section class="artwork-section section-space" id="artwork">
-      <div class="artwork-heading">
-        <div>
-          <p class="eyebrow">COLOUR OUTSIDE THE LINES</p>
-          <h2>A peek at the<br><span>paint-splattered world.</span></h2>
-        </div>
-        <p>Bright colours, suspicious choices, and a whole lot of room to make a mess.</p>
-      </div>
-      <div class="artwork-grid">
-        <a class="artwork-item artwork-item-large" href="images/header_capsule_920x430.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line key artwork">
-          <img src="images/header_capsule_920x430.png" alt="Out of Line key artwork with colourful graffiti lettering and the Find the Fake tagline." loading="lazy">
-          <span class="artwork-caption">Key artwork</span>
+      <div class="game-gallery">
+        <a class="gallery-image gallery-image-feature" href="images/page_background_1438x810.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line key artwork">
+          <img src="images/page_background_1438x810.jpg" alt="Out of Line artwork with neon graffiti lettering, spray paint and a metallic room." loading="lazy">
         </a>
-        <a class="artwork-item" href="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork one">
-          <img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line concept artwork" loading="lazy">
+        <a class="gallery-image gallery-image-tall" href="images/vertical_capsule_748x896.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line vertical artwork">
+          <img src="images/vertical_capsule_748x896.png" alt="Out of Line vertical promotional artwork." loading="lazy">
         </a>
-        <a class="artwork-item" href="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork two">
-          <img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line concept artwork" loading="lazy">
+        <a class="gallery-image" href="images/header_capsule_920x430.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line header artwork">
+          <img src="images/header_capsule_920x430.png" alt="Out of Line header artwork." loading="lazy">
         </a>
-        <a class="artwork-item" href="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork three">
-          <img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line concept artwork" loading="lazy">
+        <a class="gallery-image" href="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork one">
+          <img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line concept artwork." loading="lazy">
         </a>
-        <a class="artwork-item" href="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork four">
-          <img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line concept artwork" loading="lazy">
+        <a class="gallery-image" href="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork two">
+          <img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line concept artwork." loading="lazy">
         </a>
-      </div>
-      <p class="gallery-note">Concept and promotional artwork from the project.</p>
-    </section>
-
-    <section class="how-section section-space" id="how-to-play">
-      <div class="how-heading">
-        <p class="eyebrow">THE ROUND, IN THREE BEATS</p>
-        <h2>Draw a bit.<br><span>Get suspicious.</span></h2>
-      </div>
-      <div class="how-steps">
-        <article class="how-step">
-          <span class="step-number">01</span>
-          <h3>Get your word</h3>
-          <p>Everyone gets a prompt — but not necessarily the same one.</p>
-        </article>
-        <article class="how-step">
-          <span class="step-number">02</span>
-          <h3>Make your mark</h3>
-          <p>Use paintball-style tools to add your part to the giant shared picture.</p>
-        </article>
-        <article class="how-step">
-          <span class="step-number">03</span>
-          <h3>Call it out</h3>
-          <p>Compare clues, explain your choices, and vote for the person who seems out of line.</p>
-        </article>
-      </div>
-      <div class="how-cta">
-        <p>Think you can spot the odd one out?</p>
-        <button class="platform-button platform-steam" type="button" data-modal-open="steam-modal">
-          <img src="images/brands/steam.svg" alt="" class="platform-logo">
-          <span>Wishlist on Steam</span>
-        </button>
+        <a class="gallery-image" href="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork three">
+          <img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line concept artwork." loading="lazy">
+        </a>
+        <a class="gallery-image" href="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork four">
+          <img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line concept artwork." loading="lazy">
+        </a>
       </div>
     </section>
 
-    <section class="studio-section section-space" id="studio">
-      <div class="studio-art">
-        <div class="studio-mark-frame">
-          <img src="images/favicon.png" alt="Lunaphase Games emblem" loading="lazy">
-        </div>
-        <p class="studio-stamp">INDEPENDENT GAME STUDIO</p>
-      </div>
-      <div class="studio-copy">
-        <p class="eyebrow">AND WHO'S MAKING THIS?</p>
-        <h2>Hey, we're<br><span>Lunaphase Games.</span></h2>
+    <section class="about-section section-space" id="about" aria-labelledby="about-title">
+      <div class="about-mark-wrap"><img class="about-mark" src="images/favicon.png" alt="Lunaphase Games emblem" loading="lazy"></div>
+      <div class="about-copy">
+        <p class="eyebrow">A LITTLE ABOUT US</p>
+        <h2 id="about-title">ABOUT</h2>
         <p>We're an independent studio working on <em>Out of Line</em> — a multiplayer game about colourful chaos, strange drawings, and trying to read your friends' minds.</p>
-        <p>More from us as the game takes shape. Come along for the ride.</p>
-        <div class="studio-actions">
-          <button class="platform-button platform-discord" type="button" data-modal-open="discord-modal">
-            <img src="images/brands/discord.svg" alt="" class="platform-logo">
-            <span>Say hi on Discord</span>
-          </button>
-          <a class="platform-button platform-youtube" href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">
-            <img src="images/brands/youtube.svg" alt="" class="platform-logo">
-            <span>Watch on YouTube</span>
-          </a>
-        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-space" id="contact" aria-labelledby="contact-title">
+      <div class="contact-heading">
+        <p class="eyebrow">SAY HELLO</p>
+        <h2 id="contact-title">CONTACT</h2>
+      </div>
+      <div class="contact-links">
+        <a href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer"><img src="images/brands/steam.svg" alt=""><span>Steam</span></a>
+        <a href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer"><img src="images/brands/discord.svg" alt=""><span>Discord</span></a>
+        <a href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer"><img src="images/brands/youtube.svg" alt=""><span>YouTube</span></a>
+        <a href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer"><img src="images/brands/instagram.svg" alt=""><span>Instagram</span></a>
+        <a href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer"><img src="images/brands/tiktok.svg" alt=""><span>TikTok</span></a>
+        <a href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer"><img src="images/brands/x.svg" alt=""><span>X</span></a>
+        <a href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer"><img src="images/brands/facebook.svg" alt=""><span>Facebook</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-main">
-      <a class="footer-brand" href="#top">
-        <img src="images/favicon.png" alt="" class="footer-mark" loading="lazy">
-        <span>Lunaphase Games</span>
-      </a>
-      <p class="footer-title">Lunaphase Games <span>|</span> Out of Line</p>
-      <a class="footer-top" href="#top">Back to top ↑</a>
+      <a class="footer-brand" href="#top"><img src="images/favicon.png" alt="" class="footer-mark" loading="lazy"><span>Lunaphase Games</span></a>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="#games">GAMES</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Lunaphase Games</span>
-      <div class="footer-links">
-        <a class="footer-social social-steam" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer" aria-label="Out of Line on Steam"><img src="images/brands/steam.svg" alt=""></a>
-        <a class="footer-social social-discord" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games Discord"><img src="images/brands/discord.svg" alt=""></a>
-        <a class="footer-social social-youtube" href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games on YouTube"><img src="images/brands/youtube.svg" alt=""></a>
-        <a class="footer-social social-instagram" href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games on Instagram"><img src="images/brands/instagram.svg" alt=""></a>
-        <a class="footer-social social-tiktok" href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games on TikTok"><img src="images/brands/tiktok.svg" alt=""></a>
-        <a class="footer-social social-x" href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games on X"><img src="images/brands/x.svg" alt=""></a>
-        <a class="footer-social social-facebook" href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer" aria-label="Lunaphase Games on Facebook"><img src="images/brands/facebook.svg" alt=""></a>
+      <span>© <span id="year">2026</span> Lunaphase Games. All rights reserved.</span>
+      <div class="footer-socials" aria-label="Social links">
+        <a href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer" aria-label="Steam"><img src="images/brands/steam.svg" alt=""></a>
+        <a href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer" aria-label="Discord"><img src="images/brands/discord.svg" alt=""></a>
+        <a href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/brands/youtube.svg" alt=""></a>
+        <a href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="images/brands/instagram.svg" alt=""></a>
+        <a href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="images/brands/tiktok.svg" alt=""></a>
+        <a href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="images/brands/x.svg" alt=""></a>
+        <a href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="images/brands/facebook.svg" alt=""></a>
       </div>
     </div>
   </footer>
 
   <div class="modal-layer" id="steam-modal" aria-hidden="true">
-    <section class="action-modal steam-modal" role="dialog" aria-modal="true" aria-labelledby="steam-modal-title" tabindex="-1">
+    <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="steam-modal-title" tabindex="-1">
       <button class="modal-close" type="button" data-modal-close>Close</button>
-      <img class="modal-art" src="images/small_capsule_462x174.png" alt="Out of Line key artwork" loading="lazy">
-      <p class="modal-eyebrow"><img src="images/brands/steam.svg" alt="" class="platform-logo"> OUT OF LINE ON STEAM</p>
-      <h2 id="steam-modal-title">Keep it on your wishlist.</h2>
-      <p>Open the Steam page to wishlist Out of Line and keep it easy to find.</p>
-      <a class="platform-button platform-steam modal-action" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">
-        <img src="images/brands/steam.svg" alt="" class="platform-logo"><span>Open Steam page</span>
-      </a>
+      <img class="modal-art" src="images/small_capsule_462x174.png" alt="Out of Line artwork" loading="lazy">
+      <p class="modal-eyebrow"><img src="images/brands/steam.svg" alt="">OUT OF LINE ON STEAM</p>
+      <h2 id="steam-modal-title">Wishlist Out of Line.</h2>
+      <p>Keep the game on your Steam wishlist and follow along as the project develops.</p>
+      <a class="platform-button platform-steam modal-action" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer"><img src="images/brands/steam.svg" alt=""><span>Open Steam page</span></a>
       <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
     </section>
   </div>
 
   <div class="modal-layer" id="discord-modal" aria-hidden="true">
-    <section class="action-modal discord-modal" role="dialog" aria-modal="true" aria-labelledby="discord-modal-title" tabindex="-1">
+    <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="discord-modal-title" tabindex="-1">
       <button class="modal-close" type="button" data-modal-close>Close</button>
-      <div class="discord-modal-head">
-        <img src="images/favicon.png" alt="Lunaphase Games emblem" loading="lazy">
-        <p class="modal-eyebrow"><img src="images/brands/discord.svg" alt="" class="platform-logo"> LUNAPHASE GAMES COMMUNITY</p>
-      </div>
+      <div class="discord-modal-head"><img src="images/favicon.png" alt="" loading="lazy"><p class="modal-eyebrow"><img src="images/brands/discord.svg" alt="">LUNAPHASE GAMES COMMUNITY</p></div>
       <h2 id="discord-modal-title">Come hang out.</h2>
-      <p>Join the Discord to follow the project, share your thoughts, and chat with the community.</p>
-      <a class="platform-button platform-discord modal-action" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">
-        <img src="images/brands/discord.svg" alt="" class="platform-logo"><span>Accept Discord invite</span>
-      </a>
+      <p>Join the Discord to follow the project and chat with the Lunaphase Games community.</p>
+      <a class="platform-button platform-discord modal-action" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer"><img src="images/brands/discord.svg" alt=""><span>Accept Discord invite</span></a>
       <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
     </section>
   </div>
