@@ -443,3 +443,43 @@ body.lightbox-open { overflow: hidden; }
     text-align: center;
   }
 }
+
+
+/* Final layout polish: keep the studio mark close to About copy and unify alignment. */
+@media (min-width: 681px) {
+  .about-section {
+    grid-template-columns: minmax(0, 1.4fr) minmax(180px, .6fr);
+    gap: clamp(24px, 4vw, 56px);
+  }
+  .about-copy { order: 1; }
+  .about-mark-wrap {
+    order: 2;
+    width: min(250px, 100%);
+  }
+  .contact-heading { text-align: center; }
+  .contact-links { justify-items: center; }
+  .contact-links a { width: min(100%, 260px); }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+  .brand { font-size: 17px; }
+  .main-nav a { font-size: 14px; }
+}
+@media (max-width: 680px) {
+  .brand { font-size: 12px; }
+  .main-nav { gap: 16px; }
+  .main-nav a { font-size: 10px; }
+  .contact-links { justify-items: center; }
+  .contact-links a { width: min(100%, 260px); }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+}
