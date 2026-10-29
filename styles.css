@@ -1213,3 +1213,203 @@ body {
     transition: none !important;
   }
 }
+
+
+/* Branded 404 page, sharing the landing page's responsive header/footer. */
+.not-found-body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 72% 48%, rgba(40, 104, 142, .16), transparent 48%),
+    rgb(0, 18, 32);
+}
+.not-found-page {
+  position: relative;
+  isolation: isolate;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: min(720px, 76svh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(60px, 9vw, 120px) 6%;
+}
+.not-found-glow {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: min(68vw, 700px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(157, 200, 224, .1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(47, 116, 153, .12), transparent 67%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.not-found-content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+.not-found-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  color: #9dc8e0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+.not-found-eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9dc8e0;
+  box-shadow: 0 0 15px rgba(157, 200, 224, .6);
+}
+.not-found-number {
+  margin: 0;
+  color: rgba(220, 239, 249, .07);
+  font-size: clamp(150px, 29vw, 340px);
+  font-weight: 900;
+  letter-spacing: -.1em;
+  line-height: .92;
+  font-variant-numeric: tabular-nums;
+}
+.not-found-content h1 {
+  margin: -12px 0 0;
+  color: #f0f6fa;
+  font-size: clamp(32px, 5.4vw, 68px);
+  font-weight: 850;
+  letter-spacing: -.065em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.not-found-content h1 em {
+  color: #9dc8e0;
+  font-style: normal;
+}
+.not-found-description {
+  max-width: 470px;
+  margin: 20px auto 0;
+  color: #c0ced9;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.not-found-primary,
+.not-found-secondary {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform .18s, background .18s, border-color .18s;
+}
+.not-found-primary {
+  border: 1px solid #dcecf5;
+  background: #eaf4fa;
+  color: #001220;
+}
+.not-found-secondary {
+  border: 1px solid rgba(220, 236, 245, .24);
+  background: rgba(220, 236, 245, .04);
+  color: #f0f6fa;
+}
+.not-found-primary:hover,
+.not-found-secondary:hover {
+  transform: translateY(-2px);
+}
+.not-found-secondary:hover {
+  background: rgba(220, 236, 245, .1);
+  border-color: rgba(220, 236, 245, .5);
+}
+.not-found-bottom-note {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  color: rgba(192, 206, 217, .48);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.not-found-bottom-note span {
+  padding: 0 5px;
+  color: #9dc8e0;
+}
+@media (max-width: 680px) {
+  .not-found-page {
+    min-height: 0;
+    padding: 72px 20px 78px;
+  }
+  .not-found-glow {
+    width: 110vw;
+  }
+  .not-found-eyebrow {
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+  .not-found-number {
+    margin: 8px 0 0;
+    font-size: clamp(130px, 40vw, 220px);
+  }
+  .not-found-content h1 {
+    margin-top: -2px;
+    font-size: clamp(31px, 8.6vw, 46px);
+    line-height: 1.04;
+  }
+  .not-found-description {
+    max-width: 330px;
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .not-found-actions {
+    width: min(100%, 350px);
+    flex-direction: column;
+    margin: 24px auto 0;
+    gap: 10px;
+  }
+  .not-found-primary,
+  .not-found-secondary {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .not-found-bottom-note {
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    font-size: 8px;
+  }
+  .not-found-body .site-footer {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .not-found-primary,
+  .not-found-secondary {
+    transition: none !important;
+  }
+}
