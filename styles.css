@@ -832,3 +832,384 @@ body.lightbox-open { overflow: hidden; }
     height: 72px;
   }
 }
+
+
+/* Mobile optimization pass: consistent spacing, working dropdown navigation,
+   readable content, two-column gallery, and comfortable touch targets. */
+html {
+  scroll-padding-top: 20px;
+  overflow-x: clip;
+}
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+.site-header {
+  width: 100%;
+}
+.header-inner {
+  min-width: 0;
+}
+.brand {
+  min-width: 0;
+}
+.brand span {
+  white-space: nowrap;
+}
+.main-nav a,
+.footer-socials a,
+.contact-discord-link {
+  -webkit-tap-highlight-color: transparent;
+}
+.gallery-image {
+  touch-action: manipulation;
+}
+.contact-description {
+  text-wrap: pretty;
+}
+@media (min-width: 681px) and (max-width: 980px) {
+  .header-inner {
+    width: 92%;
+    gap: 24px;
+    min-height: 84px;
+  }
+  .brand {
+    font-size: 15px;
+    gap: 9px;
+  }
+  .studio-mark {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+  .main-nav {
+    gap: clamp(20px, 3vw, 32px);
+  }
+  .main-nav a {
+    font-size: 13px;
+  }
+  .section-space {
+    padding-top: clamp(64px, 8vw, 84px);
+    padding-bottom: clamp(64px, 8vw, 84px);
+  }
+  .game-gallery {
+    grid-auto-rows: clamp(210px, 29vw, 300px);
+    gap: 12px;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 16px;
+  }
+  .site-header {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .header-inner {
+    position: relative;
+    width: calc(100% - 32px);
+    min-height: 72px;
+    gap: 10px;
+  }
+  .brand {
+    flex: 1 1 auto;
+    gap: 8px;
+    font-size: clamp(11px, 3.4vw, 14px);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+  }
+  .studio-mark {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+  }
+  .menu-toggle {
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    min-height: 42px;
+    padding: 0 12px;
+    border: 1px solid rgba(230,241,248,.35);
+    border-radius: 7px;
+    background: rgba(225,240,248,.06);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 750;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  .main-nav,
+  .main-nav.is-open {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% - 1px);
+    right: 0;
+    left: 0;
+    width: auto;
+    display: none;
+    flex: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 16px 12px;
+    border: 1px solid rgba(225,240,248,.16);
+    border-radius: 0 0 10px 10px;
+    background: rgb(0,18,32);
+    box-shadow: 0 16px 32px rgba(0,0,0,.3);
+  }
+  .main-nav.is-open {
+    display: flex;
+  }
+  .main-nav a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(225,240,248,.12);
+    font-size: 13px;
+    letter-spacing: .1em;
+    line-height: 1.25;
+    white-space: normal;
+  }
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+  .hero {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+  .hero-background {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: clamp(205px, 64vw, 285px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .hero-overlay {
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,18,32,.12) 0%,
+      rgba(0,18,32,.04) 35%,
+      rgba(0,18,32,.24) 62%,
+      rgba(0,18,32,.68) 100%
+    );
+  }
+  .hero-bottom {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin: 0;
+    padding: 18px 16px 0;
+  }
+  .hero-actions {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    padding: 14px 16px;
+    font-size: 14px;
+    white-space: normal;
+  }
+  .section-space {
+    padding: 54px 16px;
+  }
+  .games-section {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+  .section-heading {
+    margin-bottom: 22px;
+  }
+  .section-heading h2,
+  .about-copy h2,
+  .contact-heading h2 {
+    font-size: clamp(2rem, 8.5vw, 2.7rem);
+    line-height: 1;
+    letter-spacing: -.055em;
+    overflow-wrap: anywhere;
+  }
+  .games-tagline {
+    margin: 10px 0 22px;
+    font-size: clamp(15px, 4.4vw, 18px);
+    line-height: 1.5;
+  }
+  .game-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+  .gallery-image {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #061a29;
+  }
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .about-section {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 0;
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+  .about-copy {
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    text-align: center;
+  }
+  .about-top-icon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+  }
+  .about-copy h2 {
+    margin-bottom: 18px;
+  }
+  .about-copy > p:last-child {
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+  .contact-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  .contact-heading {
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  .contact-heading h2 {
+    text-align: center;
+  }
+  .contact-description {
+    margin-top: 16px;
+    font-size: clamp(14px, 3.9vw, 16px);
+    line-height: 1.6;
+  }
+  .contact-links {
+    width: 100%;
+    margin-top: 22px;
+  }
+  .contact-links .contact-discord-link {
+    width: min(100%, 360px);
+    min-height: 64px;
+    padding: 15px 18px;
+    gap: 12px;
+    border-radius: 9px;
+    font-size: 15px;
+  }
+  .contact-links .contact-discord-link img {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+  }
+  .site-footer {
+    padding: 20px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+  }
+  .footer-bottom {
+    width: 100%;
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-socials {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-socials a {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .footer-socials img {
+    width: 25px;
+    height: 25px;
+  }
+  .lightbox {
+    padding: max(12px, env(safe-area-inset-top, 0px)) 12px
+      max(12px, env(safe-area-inset-bottom, 0px));
+  }
+  .lightbox-image {
+    max-width: 100%;
+    max-height: 82dvh;
+    border-radius: 5px;
+  }
+  .lightbox-close {
+    top: max(12px, env(safe-area-inset-top, 0px));
+    right: max(12px, env(safe-area-inset-right, 0px));
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 360px) {
+  .header-inner {
+    width: calc(100% - 24px);
+    gap: 8px;
+  }
+  .brand {
+    gap: 6px;
+    font-size: 11px;
+  }
+  .studio-mark {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+  .menu-toggle {
+    min-width: 48px;
+    min-height: 40px;
+    padding: 0 9px;
+    font-size: 11px;
+  }
+  .section-space {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .game-gallery {
+    gap: 8px;
+  }
+  .footer-socials {
+    gap: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .gallery-image img,
+  .platform-button,
+  .footer-socials a {
+    transition: none !important;
+  }
+}
