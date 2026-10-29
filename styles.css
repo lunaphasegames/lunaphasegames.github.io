@@ -57,7 +57,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #e6f3fa;outline-offset:4p
 .scroll-line{display:block;width:1px;height:25px;background:linear-gradient(#d4e7f1,transparent)}
 
 /* ROOM TO BREATHE: wider sections, larger type, fewer tiny labels. */
-.section-space{padding:clamp(72px,9vw,132px) max(var(--gutter),calc((100vw - var(--content))/2))}
+.section-space{padding:clamp(72px,9vw,132px) var(--gutter)}
 .game-section{background:#eef4f8;color:#0a2f49}
 .section-topline{max-width:var(--content);margin:0 auto 40px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .eyebrow{margin:0;color:#2f6587;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -116,7 +116,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #e6f3fa;outline-offset:4p
 .studio-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
 
 /* Footer carries the general links and simple studio details. */
-.site-footer{padding:26px max(var(--gutter),calc((100vw - var(--content))/2)) 20px;background:#001522;color:#b3c5d2}
+.site-footer{padding:26px var(--gutter) 20px;background:#001522;color:#b3c5d2}
 .footer-main,.footer-bottom{width:100%;max-width:var(--content);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .footer-main{padding-bottom:22px;border-bottom:1px solid rgba(224,239,248,.15)}
 .footer-brand{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:750;color:#f0f6fa}
