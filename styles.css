@@ -229,3 +229,58 @@ body.lightbox-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .lightbox, .gallery-image img { transition: none; }
 }
+
+
+/* Mobile hero: show the complete panoramic artwork, then keep the CTAs in normal flow. */
+@media (max-width: 680px) {
+  .hero {
+    min-height: 0;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+
+  .hero-background {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3840 / 1240;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .hero-overlay {
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,18,32,.28) 0%,
+      rgba(0,18,32,.05) 35%,
+      rgba(0,18,32,.18) 62%,
+      rgba(0,18,32,.6) 100%
+    );
+  }
+
+  .hero-bottom {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 18px 5% 0;
+  }
+
+  .hero-actions {
+    width: min(100%, 370px);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+  }
+}
