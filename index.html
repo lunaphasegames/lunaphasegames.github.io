@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11120f">
+  <meta name="theme-color" content="#003153">
   <meta name="description" content="Out of Line is a multiplayer social deduction game about drawing together, reading the canvas, and working out who has the wrong prompt.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lunaphasegames.github.io/">
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/lunaphase-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lunaphase Games">
-  <meta property="og:title" content="Out of Line — Lunaphase Games">
-  <meta property="og:description" content="One canvas. Different ideas. Can you spot who's out of line?">
+  <meta property="og:title" content="Lunaphase Games">
+  <meta property="og:description" content="Independent game studio making Out of Line.">
   <meta property="og:url" content="https://lunaphasegames.github.io/">
-  <meta property="og:image" content="https://lunaphasegames.github.io/images/header_capsule_920x430.png">
+  <meta property="og:image" content="https://lunaphasegames.github.io/images/lunaphase-social-card.png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="315">
+  <meta name="twitter:image" content="https://lunaphasegames.github.io/images/lunaphase-social-card.png">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Out of Line — Lunaphase Games</title>
+  <title>Lunaphase Games — Independent Game Studio | Out of Line</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,14 +28,14 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="#top" aria-label="Out of Line home">
-        <img class="cutout-logo brand-logo" src="images/library_logo_1280x720.png" alt="Out of Line" data-cutout-logo>
+        <img class="studio-logo brand-logo" src="images/lunaphase-logo.svg" alt="Lunaphase Games">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <a href="#game">The game</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#studio">Studio</a>
-        <button class="nav-cta" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+        <button class="brand-button platform-steam nav-cta" type="button" data-modal-open="steam-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">Wishlist on Steam</button>
       </nav>
     </div>
   </header>
@@ -46,8 +49,8 @@
         <img class="cutout-logo hero-logo" src="images/library_logo_1280x720.png" alt="Out of Line" fetchpriority="high" data-cutout-logo>
         <p class="hero-copy">Everyone's drawing from the same prompt. At least, that's the idea.</p>
         <div class="hero-actions">
-          <button class="button button-primary" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
-          <button class="button button-secondary" type="button" data-modal-open="discord-modal">Join the Discord</button>
+          <button class="brand-button platform-steam button" type="button" data-modal-open="steam-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">Wishlist on Steam</button>
+          <button class="brand-button platform-discord button" type="button" data-modal-open="discord-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/discord/FFFFFF" alt="">Join the Discord</button>
         </div>
         <p class="hero-caption">Draw together. Compare notes. Find the one who's guessing.</p>
       </div>
@@ -60,7 +63,7 @@
         <h1>One prompt.<br><span>Different stories.</span></h1>
         <p><strong>Out of Line</strong> is a social deduction game built around a shared drawing. Most players know what they're trying to make. One player has to work it out without giving themselves away.</p>
         <p>Add a few friends, take turns on the canvas, then talk through what looks right — and what doesn't. Being a good artist isn't the point. Convincing everyone is another matter.</p>
-        <button class="text-link" type="button" data-modal-open="steam-modal">See the game on Steam</button>
+        <button class="brand-button platform-steam text-link" type="button" data-modal-open="steam-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">See the game on Steam</button>
       </div>
       <a class="game-image-link" href="images/header_capsule_920x430.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork">
         <img src="images/header_capsule_920x430.png" alt="Out of Line key artwork" loading="lazy">
@@ -154,22 +157,22 @@
       </div>
       <div class="studio-links">
         <p class="eyebrow">FIND US ELSEWHERE</p>
-        <a href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer">X</a>
-        <a href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <button type="button" data-modal-open="discord-modal">Discord community</button>
+        <a class="platform-link platform-youtube" href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/youtube/FFFFFF" alt="">YouTube</a>
+        <a class="platform-link platform-instagram" href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/instagram/FFFFFF" alt="">Instagram</a>
+        <a class="platform-link platform-tiktok" href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="">TikTok</a>
+        <a class="platform-link platform-x" href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/x/FFFFFF" alt="">X</a>
+        <a class="platform-link platform-facebook" href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="">Facebook</a>
+        <button class="platform-link platform-discord" type="button" data-modal-open="discord-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/discord/FFFFFF" alt="">Discord community</button>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <a class="footer-brand" href="#top" aria-label="Back to top">
-      <img class="cutout-logo footer-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
+      <img class="studio-logo footer-logo" src="images/lunaphase-logo.svg" alt="Lunaphase Games" loading="lazy">
     </a>
     <span>© <span id="year">2026</span> Lunaphase Games</span>
-    <button class="footer-wishlist" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+    <button class="brand-button platform-steam footer-wishlist" type="button" data-modal-open="steam-modal"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">Wishlist on Steam</button>
   </footer>
 
   <div class="modal-layer" id="steam-modal" aria-hidden="true">
@@ -177,10 +180,10 @@
       <button class="modal-close" type="button" data-modal-close>Close</button>
       <img class="modal-art" src="images/header_capsule_920x430.png" alt="Out of Line key artwork" loading="lazy">
       <img class="cutout-logo modal-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
-      <p class="eyebrow">OUT OF LINE ON STEAM</p>
+      <p class="eyebrow modal-platform"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">OUT OF LINE ON STEAM</p>
       <h2 id="steam-modal-title">Keep it on your list.</h2>
       <p>Add Out of Line to your Steam wishlist to find it easily and keep an eye on the game.</p>
-      <a class="button button-primary modal-action" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">Open Steam page</a>
+      <a class="brand-button platform-steam modal-action" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/steam/FFFFFF" alt="">Open Steam page</a>
       <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
     </section>
   </div>
@@ -190,10 +193,10 @@
       <button class="modal-close" type="button" data-modal-close>Close</button>
       <img class="modal-art" src="images/page_background_1438x810.jpg" alt="Out of Line game artwork" loading="lazy">
       <img class="cutout-logo modal-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
-      <p class="eyebrow">OUT OF LINE COMMUNITY</p>
+      <p class="eyebrow modal-platform"><img class="brand-icon" src="https://cdn.simpleicons.org/discord/FFFFFF" alt="">OUT OF LINE COMMUNITY</p>
       <h2 id="discord-modal-title">Come say hello.</h2>
       <p>Join the Discord to follow development, share your thoughts, and meet other people interested in the game.</p>
-      <a class="button button-primary modal-action" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">Accept Discord invite</a>
+      <a class="brand-button platform-discord modal-action" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer"><img class="brand-icon" src="https://cdn.simpleicons.org/discord/FFFFFF" alt="">Accept Discord invite</a>
       <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
     </section>
   </div>
