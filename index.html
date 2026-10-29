@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#11120f">
-  <meta name="description" content="Out of Line is a multiplayer social deduction game about making one picture together — and figuring out who got the wrong idea.">
+  <meta name="description" content="Out of Line is a multiplayer social deduction game about drawing together, reading the canvas, and working out who has the wrong prompt.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lunaphasegames.github.io/">
   <link rel="icon" href="images/favicon.png" type="image/png">
@@ -13,207 +13,189 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lunaphase Games">
   <meta property="og:title" content="Out of Line — Lunaphase Games">
-  <meta property="og:description" content="One canvas. Different ideas. Figure out who is out of line.">
+  <meta property="og:description" content="One canvas. Different ideas. Can you spot who's out of line?">
   <meta property="og:url" content="https://lunaphasegames.github.io/">
   <meta property="og:image" content="https://lunaphasegames.github.io/images/header_capsule_920x430.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Out of Line — Lunaphase Games</title>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#top" aria-label="Lunaphase Games home">
-      <img class="brand-image" src="images/library_logo_1280x720.png" alt="Out of Line">
-    </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation" type="button">
-      <span></span><span></span>
-    </button>
-    <nav id="nav" aria-label="Main navigation">
-      <a href="#game">The game</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#gallery">Artwork</a>
-      <a href="#studio">Studio</a>
-      <a class="nav-steam" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">
-        
-        Wishlist on Steam
-      </a>
-    </nav>
-  </div>
-</header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main id="main">
-  <section class="hero" id="top">
-    <div class="hero-art" aria-hidden="true"></div>
-    <div class="hero-vignette" aria-hidden="true"></div>
-    <div class="hero-gridline" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <div class="hero-kicker"><span class="live-dot"></span> A GAME BY LUNAPHASE GAMES</div>
-      <div class="hero-logo-wrap">
-        <img class="game-logo" src="images/library_logo_1280x720.png" alt="Out of Line" fetchpriority="high">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Out of Line home">
+        <img class="cutout-logo brand-logo" src="images/library_logo_1280x720.png" alt="Out of Line" data-cutout-logo>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#game">The game</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#studio">Studio</a>
+        <button class="nav-cta" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <img class="hero-art" src="images/library_hero_3840x1240.png" alt="" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-note">A multiplayer game from Lunaphase Games</p>
+        <img class="cutout-logo hero-logo" src="images/library_logo_1280x720.png" alt="Out of Line" fetchpriority="high" data-cutout-logo>
+        <p class="hero-copy">Everyone's drawing from the same prompt. At least, that's the idea.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+          <button class="button button-secondary" type="button" data-modal-open="discord-modal">Join the Discord</button>
+        </div>
+        <p class="hero-caption">Draw together. Compare notes. Find the one who's guessing.</p>
       </div>
-      <p class="hero-summary">Everyone gets a prompt. One person might be working from a different one.</p>
-      <div class="hero-actions">
-        <a class="button button-steam" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">
-          
-          <span><strong>Wishlist on Steam</strong><small>Keep it on your radar</small></span>
-          
-        </a>
-        <a class="button button-discord" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">
-          
-          <span><strong>Join the Discord</strong><small>Meet the people behind it</small></span>
-          
-        </a>
+      <a class="hero-bottom-link" href="#game">Take a closer look</a>
+    </section>
+
+    <section class="game-section section-pad" id="game">
+      <div class="section-copy">
+        <p class="eyebrow">THE IDEA</p>
+        <h1>One prompt.<br><span>Different stories.</span></h1>
+        <p><strong>Out of Line</strong> is a social deduction game built around a shared drawing. Most players know what they're trying to make. One player has to work it out without giving themselves away.</p>
+        <p>Add a few friends, take turns on the canvas, then talk through what looks right — and what doesn't. Being a good artist isn't the point. Convincing everyone is another matter.</p>
+        <button class="text-link" type="button" data-modal-open="steam-modal">See the game on Steam</button>
       </div>
-      <div class="hero-foot">
-        <span>DRAW SOMETHING.</span><span>COMPARE NOTES.</span><span>FIND THE ODD ONE OUT.</span>
+      <a class="game-image-link" href="images/header_capsule_920x430.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line artwork">
+        <img src="images/header_capsule_920x430.png" alt="Out of Line key artwork" loading="lazy">
+      </a>
+    </section>
+
+    <section class="round-section section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">HOW A ROUND GOES</p>
+        <h2>It's simple until<br><span>someone gets nervous.</span></h2>
       </div>
-    </div>
-    <a class="scroll-cue" href="#game"><span></span> TAKE A LOOK</a>
-  </section>
-
-  <section class="intro section container" id="game">
-    <div class="eyebrow-row"><span>01</span><span>THE IDEA</span><span class="eyebrow-rule"></span></div>
-    <div class="intro-grid">
-      <h1 class="section-title">One shared canvas.<br><em>One person is guessing.</em></h1>
-      <div class="intro-copy">
-        <p><strong>Out of Line</strong> is a multiplayer social deduction game built around a shared canvas. Everyone gets the same prompt — but one player doesn't quite have the same information.</p>
-        <p>Draw your part, study everyone else's, then work out who's improvising. It helps to know your friends. It doesn't guarantee anything.</p>
-        <a class="inline-link" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">See Out of Line on Steam</a>
+      <div class="round-steps">
+        <article class="round-step">
+          <span class="step-number">01</span>
+          <div>
+            <h3>Make your part</h3>
+            <p>Take your turn and add to the group's picture. Everyone's choices become part of the evidence.</p>
+          </div>
+        </article>
+        <article class="round-step">
+          <span class="step-number">02</span>
+          <div>
+            <h3>Look at the whole thing</h3>
+            <p>Compare the details, ask questions, and figure out who's making it up as they go.</p>
+          </div>
+        </article>
+        <article class="round-step">
+          <span class="step-number">03</span>
+          <div>
+            <h3>Make your case</h3>
+            <p>Talk it out and vote. A confident explanation can help — unless everyone has noticed the same thing.</p>
+          </div>
+        </article>
       </div>
-    </div>
-    <div class="rule-line"></div>
-  </section>
+    </section>
 
-  <section class="loop section container" id="how-it-works">
-    <div class="loop-heading">
-      <div class="eyebrow-row"><span>02</span><span>THE ROUND</span><span class="eyebrow-rule"></span></div>
-      <p>Draw a little. Talk it out. Try not to give yourself away.</p>
-    </div>
-    <div class="loop-grid">
-      <article class="loop-card">
-        <div class="loop-card-top"><span>01</span></div>
-        <h2>Make your mark</h2>
-        <p>Take a turn on the canvas and help the group bring the prompt to life.</p>
-      </article>
-      <article class="loop-card">
-        <div class="loop-card-top"><span>02</span></div>
-        <h2>Look a little closer</h2>
-        <p>Compare choices, follow the details, and decide what doesn't add up.</p>
-      </article>
-      <article class="loop-card">
-        <div class="loop-card-top"><span>03</span></div>
-        <h2>Say what you think</h2>
-        <p>Make your case, hear everyone out, and vote for the player who's out of line.</p>
-      </article>
-    </div>
-  </section>
+    <section class="wide-art" aria-label="Out of Line artwork">
+      <img src="images/library_hero_3840x1240.png" alt="Wide artwork from Out of Line" loading="lazy">
+      <div class="wide-art-caption">
+        <span>OUT OF LINE</span>
+        <span>THE PICTURE TELLS PART OF THE STORY.</span>
+      </div>
+    </section>
 
-  <section class="art-break" aria-label="Out of Line game artwork">
-    <img src="images/library_hero_3840x1240.png" alt="Wide Out of Line game artwork" loading="lazy">
-    <div class="art-break-caption"><span>OUT OF LINE</span><span>EVERYONE HAS A DIFFERENT READ.</span></div>
-  </section>
-
-  <section class="gallery section container" id="gallery">
-    <div class="gallery-heading">
-      <div class="eyebrow-row"><span>03</span><span>IN THE WORKS</span><span class="eyebrow-rule"></span></div>
-      <h2 class="section-title">A few looks at<br><em>Out of Line.</em></h2>
-      <p>A peek at the art and the world we're putting together.</p>
-    </div>
-    <div class="gallery-grid">
-      <a class="gallery-item gallery-wide" href="images/header_capsule_920x430.png" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line capsule artwork">
-        <img src="images/header_capsule_920x430.png" alt="Out of Line capsule artwork" loading="lazy">
-        <span>01 <b aria-hidden="true">↗</b></span>
-      </a>
-      <a class="gallery-item" href="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork one">
-        <img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line concept artwork" loading="lazy"><span>02 <b aria-hidden="true">↗</b></span>
-      </a>
-      <a class="gallery-item" href="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork two">
-        <img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line concept artwork" loading="lazy"><span>03 <b aria-hidden="true">↗</b></span>
-      </a>
-      <a class="gallery-item" href="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork three">
-        <img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line concept artwork" loading="lazy"><span>04 <b aria-hidden="true">↗</b></span>
-      </a>
-      <a class="gallery-item" href="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open Out of Line concept artwork four">
-        <img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line concept artwork" loading="lazy"><span>05 <b aria-hidden="true">↗</b></span>
-      </a>
-    </div>
-  </section>
-
-  <section class="join-section">
-    <div class="container join-inner">
-      <div class="eyebrow-row"><span>04</span><span>STAY IN THE LOOP</span><span class="eyebrow-rule"></span></div>
-      <div class="join-grid">
+    <section class="screenshots section-pad" id="screenshots">
+      <div class="screenshots-heading">
         <div>
-          <h2 class="section-title">Follow along<br><em>while we build it.</em></h2>
-          <p class="join-copy">Wishlist the game if you want to keep track of it, or join the Discord to follow development and chat with us.</p>
+          <p class="eyebrow">A FEW LOOKS AT THE GAME</p>
+          <h2>Take a look<br><span>around.</span></h2>
         </div>
-        <div class="join-actions">
-          <a class="join-action join-steam" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">
-            
-            <span class="join-action-text"><small>DON'T LOSE TRACK OF IT</small><strong>Wishlist on Steam</strong></span>
-            
-          </a>
-          <a class="join-action join-discord" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">
-            
-            <span class="join-action-text"><small>COME HANG OUT</small><strong>Join the Discord</strong></span>
-            
-          </a>
+        <p>Some of the artwork behind Out of Line. Open any image to see it larger.</p>
+      </div>
+      <div class="gallery">
+        <a class="gallery-item gallery-feature" href="images/page_background_1438x810.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="images/page_background_1438x810.jpg" alt="Out of Line scene artwork" loading="lazy">
+        </a>
+        <a class="gallery-item" href="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="images/Gemini_Generated_Image_ghpj2rghpj2rghpj.jpg" alt="Out of Line concept artwork" loading="lazy">
+        </a>
+        <a class="gallery-item" href="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="images/Gemini_Generated_Image_kp8lw0kp8lw0kp8l.jpg" alt="Out of Line concept artwork" loading="lazy">
+        </a>
+        <a class="gallery-item" href="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="images/Gemini_Generated_Image_qk9pcsqk9pcsqk9p.jpg" alt="Out of Line concept artwork" loading="lazy">
+        </a>
+        <a class="gallery-item" href="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="images/Gemini_Generated_Image_ss2vthss2vthss2v.jpg" alt="Out of Line concept artwork" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <section class="community-section">
+      <img class="community-art" src="images/header_capsule_920x430.png" alt="" loading="lazy">
+      <div class="community-shade"></div>
+      <div class="community-inner">
+        <p class="eyebrow">FOLLOW DEVELOPMENT</p>
+        <h2>Want to see<br><span>what happens next?</span></h2>
+        <p>Wishlist the game to keep it on your Steam list, or join the Discord to follow along and chat with us.</p>
+        <div class="community-actions">
+          <button class="button button-primary" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+          <button class="button button-secondary" type="button" data-modal-open="discord-modal">Join the Discord</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="studio section container" id="studio">
-    <div class="eyebrow-row"><span>05</span><span>THE STUDIO</span><span class="eyebrow-rule"></span></div>
-    <div class="studio-grid">
-      <h2 class="section-title">Made by<br><em>Lunaphase Games.</em></h2>
-      <div class="studio-copy">
-        <p>Lunaphase Games is an independent studio. Out of Line is our current project, and we're sharing more as it comes together.</p>
-        <p>Follow our work and catch the next update here:</p>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">YouTube </a>
-          <a href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer">Instagram </a>
-          <a href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">TikTok </a>
-          <a href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer">X </a>
-          <a href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer">Facebook </a>
-        </div>
+    <section class="studio-section section-pad" id="studio">
+      <div class="studio-main">
+        <p class="eyebrow">THE STUDIO</p>
+        <h2>Made by<br><span>Lunaphase Games.</span></h2>
+        <p>We're an independent game studio working on Out of Line. We'll share more as development moves along.</p>
       </div>
-    </div>
-  </section>
-</main>
+      <div class="studio-links">
+        <p class="eyebrow">FIND US ELSEWHERE</p>
+        <a href="https://www.youtube.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/lunaphasegames" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@lunaphasegames" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://x.com/lunaphasegames" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://www.facebook.com/profile.php?id=61575903436130" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <button type="button" data-modal-open="discord-modal">Discord community</button>
+      </div>
+    </section>
+  </main>
 
-<footer class="site-footer">
-  <div class="container footer-main">
-    <a class="brand" href="#top" aria-label="Back to top"><img class="brand-image" src="images/library_logo_1280x720.png" alt="Out of Line"></a>
-    <span class="footer-note">INDEPENDENT GAMES, MADE TO PLAY TOGETHER.</span>
-    <a class="footer-top-link" href="#top">BACK TO TOP ↑</a>
+  <footer class="site-footer">
+    <a class="footer-brand" href="#top" aria-label="Back to top">
+      <img class="cutout-logo footer-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
+    </a>
+    <span>© <span id="year">2026</span> Lunaphase Games</span>
+    <button class="footer-wishlist" type="button" data-modal-open="steam-modal">Wishlist on Steam</button>
+  </footer>
+
+  <div class="modal-layer" id="steam-modal" aria-hidden="true">
+    <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="steam-modal-title" tabindex="-1">
+      <button class="modal-close" type="button" data-modal-close>Close</button>
+      <img class="modal-art" src="images/header_capsule_920x430.png" alt="Out of Line key artwork" loading="lazy">
+      <img class="cutout-logo modal-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
+      <p class="eyebrow">OUT OF LINE ON STEAM</p>
+      <h2 id="steam-modal-title">Keep it on your list.</h2>
+      <p>Add Out of Line to your Steam wishlist to find it easily and keep an eye on the game.</p>
+      <a class="button button-primary modal-action" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">Open Steam page</a>
+      <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
+    </section>
   </div>
-  <div class="container footer-bottom"><span>© <span id="year">2026</span> Lunaphase Games</span><span>OUT OF LINE</span><a href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">WISHLIST ON STEAM ↗</a></div>
-</footer>
 
-<div class="modal-layer" id="steam-modal" aria-hidden="true">
-  <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="steam-modal-title">
-    <button class="modal-close" type="button" aria-label="Close popup">Close</button>
-    <img class="modal-game-logo" src="images/library_logo_1280x720.png" alt="Out of Line">
-    <p class="modal-kicker">OUT OF LINE · STEAM</p>
-    <h2 id="steam-modal-title">Keep Out of Line on your radar.</h2>
-    <p>Add it to your wishlist on Steam to find it again when there's news.</p>
-    <a class="modal-primary modal-external" href="https://store.steampowered.com/app/5169010/" target="_blank" rel="noopener noreferrer">Open Steam wishlist page</a>
-    <button class="modal-secondary modal-dismiss" type="button">Maybe later</button>
-  </section>
-</div>
-<div class="modal-layer" id="discord-modal" aria-hidden="true">
-  <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="discord-modal-title">
-    <button class="modal-close" type="button" aria-label="Close popup">Close</button>
-    <img class="modal-game-logo" src="images/library_logo_1280x720.png" alt="Out of Line">
-    <p class="modal-kicker">OUT OF LINE · COMMUNITY</p>
-    <h2 id="discord-modal-title">Come say hello.</h2>
-    <p>Join the Discord for development updates and conversations with the people making the game.</p>
-    <a class="modal-primary modal-external" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">Accept invite and join Discord</a>
-    <button class="modal-secondary modal-dismiss" type="button">Maybe later</button>
-  </section>
-</div>
-
+  <div class="modal-layer" id="discord-modal" aria-hidden="true">
+    <section class="action-modal" role="dialog" aria-modal="true" aria-labelledby="discord-modal-title" tabindex="-1">
+      <button class="modal-close" type="button" data-modal-close>Close</button>
+      <img class="modal-art" src="images/page_background_1438x810.jpg" alt="Out of Line game artwork" loading="lazy">
+      <img class="cutout-logo modal-logo" src="images/library_logo_1280x720.png" alt="Out of Line" loading="lazy" data-cutout-logo>
+      <p class="eyebrow">OUT OF LINE COMMUNITY</p>
+      <h2 id="discord-modal-title">Come say hello.</h2>
+      <p>Join the Discord to follow development, share your thoughts, and meet other people interested in the game.</p>
+      <a class="button button-primary modal-action" href="https://discord.gg/uvZzBc7vxM" target="_blank" rel="noopener noreferrer">Accept Discord invite</a>
+      <button class="modal-cancel" type="button" data-modal-close>Maybe later</button>
+    </section>
+  </div>
 </body>
 </html>
